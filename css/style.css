@@ -1,0 +1,191 @@
+/*Add padding and margin to space out the page.
+Make the font larger too.*/
+body{
+	margin:1%;
+	padding:1%;
+	font-size:150%;
+  	background-color: #f1f1f1;
+  	background-image: url("../images/background.jpg");  
+}
+
+/*Make the h1 heading bigger with a bold font*/
+h1{
+	font-size: 2em; 
+	font-weight: bold;
+}
+
+
+.active{
+	background: yellow;
+    text-transform: uppercase;
+	font-weight: bold;
+}
+
+.active p{
+	text-decoration: none;;
+}
+
+/*Style the images*/
+img{
+    height: 200px;
+    width:auto;
+    border: 3px solid navy;
+	margin: 10px;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+/*Hover style to images*/
+img:hover{
+	filter: brightness();
+	border: 5px solid salmon;
+}
+
+/*Style every other image*/
+#us li:nth-child(2n+1) img{
+	border: 5px dashed aquamarine;
+	filter: opacity();
+}
+#world li:nth-child(2n+1) img{
+	border: 5px dashed aquamarine;
+	filter: opacity();
+}
+
+/*Make the h2 heading match h1*/
+h2{
+	font-size: 1em; 
+	font-weight: bold;
+}
+
+h3{
+    font-size: .9em;
+    font-style: italic;
+}
+
+/*Improve the spacing for paragraphs AND headings*/
+p, h1, h2 {
+    padding: 10px;
+}
+
+/*Add borders around the main components and some
+space too*/
+nav, main {
+	border: 3.5px solid navy;
+	margin: 25px 0;
+	padding: 30px;
+	background-color: lightyellow;
+}
+
+
+/*Style for header and footer */
+header, footer {
+	background-color: lightyellow;
+	border: 3.5px solid navy;
+	margin: 5px;
+	padding: 5px;
+}
+
+/*List elements*/
+ul {
+	list-style: square;
+	background-color: lightyellow;
+}
+
+ol {
+	list-style: decimal;
+	padding: 5px;
+}
+
+/*Change the styling for all of the list 
+items in the nav section*/
+nav[aria-label="nav1"] {
+	background-color: lightpink;
+	padding:10px;
+	width:25%;
+	border:1px dashed black;
+	width: 20%;
+	display: inline-block;
+}
+
+nav[aria-label="nav2"] {
+    font-size: smaller;
+	padding:10px;
+	width:25%;
+	border:0px solid black;
+	display: inline-block;
+	width: 20%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+#us{
+	display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+#us img{
+	border: 10px;
+    margin: 10px;
+    width: 300px;
+}
+
+/*Added this so the links stay the same color*/
+a:visited{color:#0000FF}
+
+#logo {
+    animation-name: logomove;
+    animation-duration: 5s;
+}
+
+@keyframes logomove {
+    from {width: 25px; opacity: 0;}
+    to {width: 200px; opacity: 1;}
+  }
+
+@media screen and (min-width: 900px){
+    header {
+       display: flex;
+       flex-direction: row;
+       justify-content: space-between;
+       align-items: center;
+    }
+
+
+    .nav_links {
+        display: flex;
+        flex-direction: row;
+        /*justify-self: flex-end;
+        align-items: stretch;*/
+        justify-content: space-between;
+    }
+
+    #us{
+        flex-basis: 250px;
+    }
+
+
+}
+
+@media screen and (prefers-reduced-motion: reduce){
+    /*Turn off scroll*/
+    html{
+      scroll-behavior: auto; /* Removes scroll animation */
+    }
+  
+    /*Turn off transition*/
+    a.skip {
+      -webkit-transition: initial; /* sets to default setting */
+      transition: initial; /* sets to default setting */
+    }
+  
+    /*Turn off parallax*/
+    #logo {
+        -webkit-animation: none;
+                animation: none;
+	}
+}
