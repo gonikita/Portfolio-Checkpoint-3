@@ -8,6 +8,8 @@
     <link rel="icon" href="images/icon.png">
     <link rel="stylesheet" type="text/css" href="css/html5reset.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet'>
+    <script src="https://kit.fontawesome.com/56f7d800ae.js" crossorigin="anonymous"></script>
 
     <title>About Me</title>
   </head>
@@ -20,8 +22,9 @@
         <a href="weather.html">Weather</a>
         <a href="costs.html">Costs</a>
       </nav>
+      <i class="fa-solid fa-plane fa-spin fa-4x"></i>
     </header>
-    <main>
+    <main class= "container" id= "main">
       <h1>Greetings</h1>
       <div id="introduction">
         <h2>Welcome</h2>
@@ -37,13 +40,24 @@
         <p>Hi, I am Niki. I am a junior at the University of Michigan studying business and information science. I am from Saginaw, MI and am currently residing in Ann Arbor for school. I love to bake and eat yummy desserts and am trying to love running (so I can burn off those cals). I like to be active and go on walks. I also enjoy playing sports, whether it’s a low stakes intramural game or a game of tennis with my friends. I am excited to see where life takes me next and am happy to share my journey :)</p>
         <img src = "images/umich.jpg" alt="University of Michigan image of diverse student population" width="200"/>
       </div>
+      <br/>
+      <br/>
       <div id="contact">
           <form action="https://formspree.io/f/xzbovvdr" method="post">
 				  <h1>Contact Me!</h1>
-          <label for="name">Your name:</label>  
-          <input type="text" name="name" id="name" required>
+          <br/>
+          <label for="first name">Your first name:</label>  
+          <input type="text" name="firstname" id="firstname" required>
+          <label for="last name">Your last name:</label>  
+          <input type="text" name="lastname" id="lastname" required>
+          <br/>
+          <br/>
           <label for="email">Your email:</label>  
           <input type="email" name="email" id="email" required>
+          <label for="message">Type your message here:</label>  
+          <textarea name="message" id="message" rows="2" cols="50"></textarea>
+          <br/>
+          <br/>
           <input type="Submit" value="Submit">
           </form>
       </div>
@@ -51,6 +65,12 @@
     
     <footer>
       <p>
+        <i class="fa-solid fa-mountain-sun fa-fade"></i>
+        <i class="fa-solid fa-earth-americas fa-fade"></i>
+        <i class="fa-solid fa-map-pin fa-fade"></i>
+        <i class="fa-solid fa-suitcase-rolling fa-fade"></i>
+        <i class="fa-solid fa-route fa-fade"></i>
+        <br>
         Travel Niki 101
         <br>
         Niki G. 2022
