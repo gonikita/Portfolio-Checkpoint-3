@@ -15,43 +15,6 @@ h1{
 	font-weight: bold;
 }
 
-
-.active{
-	background: yellow;
-    text-transform: uppercase;
-	font-weight: bold;
-}
-
-.active p{
-	text-decoration: none;;
-}
-
-/*Style the images*/
-img{
-    height: 200px;
-    width:auto;
-    border: 3px solid navy;
-	margin: 10px;
-    padding: 15px;
-    border-radius: 10px;
-}
-
-/*Hover style to images*/
-img:hover{
-	filter: brightness();
-	border: 5px solid salmon;
-}
-
-/*Style every other image*/
-#us li:nth-child(2n+1) img{
-	border: 5px dashed aquamarine;
-	filter: opacity();
-}
-#world li:nth-child(2n+1) img{
-	border: 5px dashed aquamarine;
-	filter: opacity();
-}
-
 /*Make the h2 heading match h1*/
 h2{
 	font-size: 1em; 
@@ -86,15 +49,65 @@ header, footer {
 	padding: 5px;
 }
 
-/*List elements*/
+header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/*List elements
 ul {
 	list-style: square;
 	background-color: lightyellow;
-}
+} */
 
 ol {
 	list-style: decimal;
 	padding: 5px;
+} 
+
+/*Style the images*/
+img{
+    height: 200px;
+    width:auto;
+    border: 3px solid navy;
+	margin: 10px;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+/*Hover style to images*/
+img:hover{
+	filter: brightness();
+	border: 5px solid salmon;
+}
+
+/*Style every other image*/
+#us li:nth-child(2n+1) img{
+	border: 5px dashed aquamarine;
+	filter: opacity();
+}
+#world li:nth-child(2n+1) img{
+	border: 5px dashed aquamarine;
+	filter: opacity();
+}
+
+.active{
+	background: yellow;
+    text-transform: uppercase;
+	font-weight: bold;
+}
+
+.active p{
+	text-decoration: none;;
 }
 
 /*Change the styling for all of the list 
@@ -113,7 +126,6 @@ nav[aria-label="nav2"] {
 	padding:10px;
 	width:25%;
 	border:0px solid black;
-	display: inline-block;
 	width: 20%;
 	display: flex;
 	flex-direction: column;
@@ -121,32 +133,115 @@ nav[aria-label="nav2"] {
 	align-items: center;
 }
 
-#us{
+
+#us1{
 	display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
+    align-items: stretch;
 }
 
-#us img{
+#us1 img{
 	border: 10px;
     margin: 10px;
     width: 300px;
+    /*justify-content: center;
+    align-items: center;*/
 }
+
+#us1 li {
+    max-width: 400px;
+    border: 3px solid navy;
+	margin: 10px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    background-color: rgb(255, 194, 203);
+}
+
+#world1{
+	display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+}
+
+#world1 img{
+	border: 10px;
+    margin: 10px;
+    width: 300px;
+    justify-self: center;
+}
+
+#world1 li {
+    max-width: 400px;
+    border: 3px solid navy;
+	margin: 10px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    background-color: rgb(255, 194, 203);
+}
+
+#us2{
+	display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 30px;
+}
+
+#us2 li img{
+    grid-column: 1/-1;
+    max-height: 500px;
+}
+
+#us2 li{
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr;
+    grid-column: span 1;
+    border: 3px solid navy;
+	margin: 10px;
+    border-radius: 10px;
+    justify-items: center;
+    background-color: rgb(255, 194, 203);
+}
+
+#world2{
+	display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 30px;
+}
+
+#world2 li img{
+    grid-column: 1/-1;
+    max-height: 500px;
+    justify-self: center;
+}
+
+#world2 li{
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr;
+    grid-column: span 1;
+    border: 3px solid navy;
+	margin: 10px;
+    border-radius: 10px;
+    justify-items: center;
+    background-color: rgb(255, 194, 203);
+}
+
 
 /*Added this so the links stay the same color*/
 a:visited{color:#0000FF}
 
-#logo {
-    animation-name: logomove;
-    animation-duration: 5s;
-}
-
-@keyframes logomove {
-    from {width: 25px; opacity: 0;}
-    to {width: 200px; opacity: 1;}
-  }
 
 @media screen and (min-width: 900px){
     header {
@@ -156,8 +251,13 @@ a:visited{color:#0000FF}
        align-items: center;
     }
 
+    /*body > header {
+        flex-direction: row;
+        position: sticky;
+        top: 0;
+    } */
 
-    .nav_links {
+    .nav1 {
         display: flex;
         flex-direction: row;
         /*justify-self: flex-end;
@@ -165,7 +265,11 @@ a:visited{color:#0000FF}
         justify-content: space-between;
     }
 
-    #us{
+    #us1, #us2, #us{
+        flex-basis: 250px;
+    }
+
+    #world1, #world2, #world{
         flex-basis: 250px;
     }
 
@@ -173,19 +277,8 @@ a:visited{color:#0000FF}
 }
 
 @media screen and (prefers-reduced-motion: reduce){
-    /*Turn off scroll*/
-    html{
-      scroll-behavior: auto; /* Removes scroll animation */
-    }
-  
-    /*Turn off transition*/
-    a.skip {
-      -webkit-transition: initial; /* sets to default setting */
-      transition: initial; /* sets to default setting */
-    }
-  
-    /*Turn off parallax*/
-    #logo {
+
+    i {
         -webkit-animation: none;
                 animation: none;
 	}
