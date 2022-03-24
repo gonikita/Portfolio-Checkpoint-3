@@ -117,8 +117,8 @@ nav[aria-label="nav1"] {
 	padding:10px;
 	width:auto;
 	border:1px dashed black;
-	/*width: 20%;
-	display: inline-block;*/
+	width: 20%;
+	display: inline-block;
 }
 
 nav[aria-label="nav2"] {
@@ -305,11 +305,30 @@ a:visited{color:#0000FF}
 }
 */
 
+#logo {
+    border: none;
+    margin: 0px;
+    padding: 0px;
+    border-radius: 0px;
+    animation-name: logomove;
+    animation-duration: 5s;
+}
+
+@keyframes logomove {
+    from {width: 25px; opacity: 0;}
+    to {width: 200px; opacity: 1;}
+  }
+
 @media screen and (prefers-reduced-motion: reduce){
+    #logo {
+        -webkit-animation: none;
+                animation: none;
+      }
 
     i {
         -webkit-animation: none;
                 animation: none;
 	}
+    
 }
 
