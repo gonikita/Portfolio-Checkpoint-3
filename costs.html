@@ -47,8 +47,24 @@
             <div id="introduction">
                 <h2>Niki's Thoughts</h2>
                 <p>Traveling is all fun and games until people start realizing the costs. Did you know you that there are always ways to save money when planning your travel? Before we talk about saving money, here are some average costs to get to each location from Ann Arbor (DTW). The durations were obtained from travelmath.com and the approximate costs from googleflights.com.</p>
-                <img src = "images/travel2.jpg" alt="diverse travel image of hikers" width="200"/>
+                <img src = "images/travel2.jpg" alt="diverse travel image of hikers" width="200" onclick="enlargeImg()" id="img1"/>
+                <button onclick="resetImg()">Reset</button>
             </div>
+            <script>
+                img1 = document.getElementById("img1");
+                
+                function enlargeImg() {
+                    img1.style.width = "60%";
+                    img1.style.height = "auto";
+                    img1.style.transition = "width 0.5s ease";
+                }
+                // Function to reset image dimensions
+                function resetImg() {
+                    img1.style.width = "40%";
+                    img1.style.height = "auto";
+                    img1.style.transition = "width 0.5s ease";
+                }
+            </script>
             <div id="us">
                 <h2>United States</h2>
                 <ul>
