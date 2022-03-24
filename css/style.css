@@ -2,11 +2,11 @@
 Make the font larger too.*/
 body{
     font-family: 'Lato', sans-serif;
-	margin:1%;
+	margin: 1%;
 	padding:1%;
-	font-size:150%;
+	font-size: 100%;
   	background-color: #f1f1f1;
-  	background-image: url("../images/background.jpg");  
+  	background-image: url("../images/background.jpg");
 }
 
 /*Make the h1 heading bigger with a bold font*/
@@ -77,7 +77,7 @@ ol {
 /*Style the images*/
 img{
     height: 200px;
-    width:auto;
+    width: 75%;
     border: 3px solid navy;
 	margin: 10px;
     padding: 15px;
@@ -115,22 +115,22 @@ items in the nav section*/
 nav[aria-label="nav1"] {
 	background-color: lightpink;
 	padding:10px;
-	width:25%;
+	width:auto;
 	border:1px dashed black;
-	width: 20%;
-	display: inline-block;
+	/*width: 20%;
+	display: inline-block;*/
 }
 
 nav[aria-label="nav2"] {
     font-size: smaller;
 	padding:10px;
-	width:25%;
+	width:auto;
 	border:0px solid black;
 	width: 20%;
-	display: flex;
+	/*display: flex;
 	flex-direction: column;
 	justify-content: center;
-	align-items: center;
+	align-items: center;*/
 }
 
 
@@ -146,12 +146,16 @@ nav[aria-label="nav2"] {
 	border: 10px;
     margin: 10px;
     width: 300px;
-    /*justify-content: center;
+    /*width: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
     align-items: center;*/
 }
 
 #us1 li {
-    max-width: 400px;
+    max-width: 400px; /*get rid of*/
     border: 3px solid navy;
 	margin: 10px;
     border-radius: 10px;
@@ -173,12 +177,13 @@ nav[aria-label="nav2"] {
 #world1 img{
 	border: 10px;
     margin: 10px;
-    width: 300px;
+    /*width: auto;*/
+    width: 300px; 
     justify-self: center;
 }
 
 #world1 li {
-    max-width: 400px;
+    max-width: 400px; /*get rid of*/
     border: 3px solid navy;
 	margin: 10px;
     border-radius: 10px;
@@ -190,15 +195,21 @@ nav[aria-label="nav2"] {
 }
 
 #us2{
+    margin: 0 auto;
 	display: grid;
     grid-template-rows: auto;
+    grid-gap: .5rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    /*display: grid;
+    grid-template-rows: auto;
     grid-template-columns: 1fr 1fr;
-    row-gap: 30px;
+    row-gap: 30px;*/
 }
 
 #us2 li img{
     grid-column: 1/-1;
-    max-height: 500px;
+    height: 200px;
+    width: 70%;
 }
 
 #us2 li{
@@ -214,16 +225,21 @@ nav[aria-label="nav2"] {
 }
 
 #world2{
+    margin: 0 auto;
 	display: grid;
     grid-template-rows: auto;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 2fr));
+	/*display: grid;
+    grid-template-rows: auto;
     grid-template-columns: 1fr 1fr;
-    row-gap: 30px;
+    row-gap: 30px;*/
 }
 
 #world2 li img{
     grid-column: 1/-1;
-    max-height: 500px;
-    justify-self: center;
+    height: 200px;
+    width: 70%;
 }
 
 #world2 li{
@@ -238,11 +254,24 @@ nav[aria-label="nav2"] {
     background-color: rgb(255, 194, 203);
 }
 
+#contact{
+    background-color: lightpink;
+	padding:10px;
+	width:auto;
+	border:1px dashed black;
+}
+
 
 /*Added this so the links stay the same color*/
 a:visited{color:#0000FF}
 
-
+@media (min-width: 600px) {
+    img {
+        height: 200px;
+        width: auto;
+    }  
+}
+/*
 @media screen and (min-width: 900px){
     header {
        display: flex;
@@ -251,17 +280,17 @@ a:visited{color:#0000FF}
        align-items: center;
     }
 
-    /*body > header {
+    body > header {
         flex-direction: row;
         position: sticky;
         top: 0;
-    } */
+    }
 
     .nav1 {
         display: flex;
         flex-direction: row;
         /*justify-self: flex-end;
-        align-items: stretch;*/
+        align-items: stretch;
         justify-content: space-between;
     }
 
@@ -273,8 +302,8 @@ a:visited{color:#0000FF}
         flex-basis: 250px;
     }
 
-
 }
+*/
 
 @media screen and (prefers-reduced-motion: reduce){
 
